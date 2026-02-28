@@ -86,34 +86,79 @@
     <hr/>
 
     <h2>Aplet GeoGebra</h2>
-    <p class="kicker">Interaktywny okrąg jednostkowy.</p>
+    <p class="kicker">Interaktywny okrąg jednostkowy utworzony przez JavaScript (GeoGebra API).</p>
     <div class="figure">
       <div id="ggb-element" class="geogebra-wrap" aria-label="GeoGebra applet container"></div>
       <div id="ggb-fallback" style="display:none">
-        <iframe title="GeoGebra aplet" src="https://www.geogebra.org/material/iframe/id/mzqhe3hg/width/1200/height/700/border/888888/sfsb/true/smb/true/stb/true/stbh/true/ai/true/asb/true/sri/true/rc/true/ld/true/sdz/true/ctl/true" style="width:100%;height:700px;border:0" allowfullscreen></iframe>
+        <iframe title="GeoGebra Graphing" src="https://www.geogebra.org/graphing?embed" style="width:100%;height:700px;border:0" allowfullscreen></iframe>
       </div>
-      <div class="cap">Aplet GeoGebra powinien uruchomić się automatycznie. Jeśli nie, włączy się tryb zapasowy.</div>
+      <div class="cap">Jeśli aplet nie uruchomi się automatycznie, włączy się widok zapasowy.</div>
     </div>
 
-    <hr/>
+    <script>
+      window.addEventListener('load', function () {
+        function showFallback() {
+          var fb = document.getElementById('ggb-fallback');
+          var host = document.getElementById('ggb-element');
+          if (fb && host) {
+            host.style.display = 'none';
+            fb.style.display = 'block';
+          }
+        }
 
-    <h2>Zadanie</h2>
-    <p>Wyznacz \(\sin 150^\circ\) oraz \(\cos 150^\circ\).</p>
-    <details>
-      <summary><b>Pokaż rozwiązanie</b></summary>
-      <div class="math-block" style="margin-top:10px">
-        \[
-          150^\circ = 180^\circ - 30^\circ
-        \]
-        \[
-          \sin(180^\circ-\theta)=\sin\theta,\quad \cos(180^\circ-\theta)=-\cos\theta
-        \]
-        \[
-          \sin150^\circ=\frac12,\quad \cos150^\circ=-\frac{\sqrt3}{2}
-        \]
-      </div>
-    </details>
-  </section>
+        try {
+          if (typeof GGBApplet !== 'function') {
+            showFallback();
+            return;
+          }
+
+          var params = {
+            appName: "graphing",
+            width: 1200,
+            height: 700,
+            showToolBar: true,
+            showAlgebraInput: true,
+            showMenuBar: true,
+            enableRightClick: true,
+            enableShiftDragZoom: true,
+            language: "pl",
+            appletOnLoad: function(api) {
+              try {
+                api.evalCommand('O=(0,0)');
+                api.evalCommand('c: x^2+y^2=1');
+                api.evalCommand('A=(1,0)');
+                api.evalCommand('B=Point(c)');
+                api.evalCommand('r=Ray(O,(1,0))');
+                api.evalCommand('s=Ray(O,B)');
+                api.evalCommand('alpha=Angle(r,s)');
+                api.evalCommand('X=(x(B),0)');
+                api.evalCommand('Y=(0,y(B))');
+                api.evalCommand('Segment(B,X)');
+                api.evalCommand('Segment(B,Y)');
+                api.evalCommand('Text("cos(α) = " + x(B), (1.2, 1.2))');
+                api.evalCommand('Text("sin(α) = " + y(B), (1.2, 1.0))');
+                api.setFixed('c', true, true);
+                api.setFixed('O', true, true);
+              } catch(e) {}
+            }
+          };
+
+          var app = new GGBApplet(params, true);
+          app.inject('ggb-element');
+
+          setTimeout(function () {
+            var host = document.getElementById('ggb-element');
+            if (!host) return;
+            var has = host.querySelector('iframe, canvas, applet, svg');
+            if (!has) showFallback();
+          }, 2000);
+        } catch (e) {
+          showFallback();
+        }
+      });
+    </script>
+
+</section>
 </main>
 
 <footer>
