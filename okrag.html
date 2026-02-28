@@ -12,7 +12,7 @@
   };
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  <script defer src="https://www.geogebra.org/apps/deployggb.js"></script>
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
 </head>
 <body>
 <header>
@@ -88,8 +88,11 @@
     <h2>Aplet GeoGebra</h2>
     <p class="kicker">Interaktywny okrąg jednostkowy.</p>
     <div class="figure">
-      <div id="ggb-element" class="geogebra-wrap"></div>
-      <div class="cap">Aplet GeoGebra jest widoczny i działa.</div>
+      <div id="ggb-element" class="geogebra-wrap" aria-label="GeoGebra applet container"></div>
+      <div id="ggb-fallback" style="display:none">
+        <iframe title="GeoGebra aplet" src="https://www.geogebra.org/material/iframe/id/mzqhe3hg/width/1200/height/700/border/888888/sfsb/true/smb/true/stb/true/stbh/true/ai/true/asb/true/sri/true/rc/true/ld/true/sdz/true/ctl/true" style="width:100%;height:700px;border:0" allowfullscreen></iframe>
+      </div>
+      <div class="cap">Aplet GeoGebra powinien uruchomić się automatycznie. Jeśli nie, włączy się tryb zapasowy.</div>
     </div>
 
     <hr/>
@@ -121,18 +124,51 @@
 
 <script>
   window.addEventListener('load', function () {
-    var params = {
-      material_id: "mzqhe3hg",
-      width: 1200,
-      height: 700,
-      showToolBar: true,
-      showAlgebraInput: true,
-      showMenuBar: true,
-      enableRightClick: true,
-      enableShiftDragZoom: true
-    };
-    var app = new GGBApplet(params, true);
-    app.inject('ggb-element');
+    var injected = false;
+
+    function showFallback() {
+      if (injected) return;
+      var fb = document.getElementById('ggb-fallback');
+      var host = document.getElementById('ggb-element');
+      if (fb && host) {
+        host.style.display = 'none';
+        fb.style.display = 'block';
+      }
+    }
+
+    try {
+      if (typeof GGBApplet === 'function') {
+        var params = {
+          material_id: "mzqhe3hg",
+          width: 1200,
+          height: 700,
+          showToolBar: true,
+          showAlgebraInput: true,
+          showMenuBar: true,
+          enableRightClick: true,
+          enableShiftDragZoom: true
+        };
+        var app = new GGBApplet(params, true);
+        app.inject('ggb-element');
+        injected = true;
+      } else {
+        showFallback();
+      }
+    } catch (e) {
+      showFallback();
+    }
+
+    setTimeout(function () {
+      var host = document.getElementById('ggb-element');
+      if (!host) return;
+      var hasIframe = host.querySelector('iframe');
+      var hasCanvas = host.querySelector('canvas');
+      var hasApplet = host.querySelector('applet');
+      if (!hasIframe && !hasCanvas && !hasApplet) {
+        injected = false;
+        showFallback();
+      }
+    }, 1200);
   });
 </script>
 <script src="assets/app.js"></script>
