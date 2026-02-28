@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Okrąg jednostkowy — sin i cos</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <div>
+        <div>Trygonometria</div>
+        <div class="small">Okrąg jednostkowy</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Start</a>
+      <a href="okrag.html">Okrąg jednostkowy</a>
+      <a href="wykresy.html">Wykresy</a>
+      <a href="tozsamosci.html">Tożsamości</a>
+      <a href="zastosowania.html">Zastosowania</a>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" type="button">Tryb</button>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding: 18px 0;">
+  <section class="card">
+    <h1>Okrąg jednostkowy</h1>
+    <p class="kicker">
+      Okrąg jednostkowy to okrąg o promieniu 1 i środku w punkcie \(O(0,0)\).
+      Dla kąta \(lpha\) punkt na okręgu ma współrzędne:
+    </p>
+
+    <div class="math-block">
+      \[
+        P(\coslpha,\ \sinlpha).
+      \]
+    </div>
+
+    <div class="columns" style="margin-top:14px">
+      <div>
+        <h2>Znaczenie współrzędnych</h2>
+        <div class="math-block">
+          \[
+            \coslpha = x,\quad \sinlpha = y,\quad 	anlpha = rac{y}{x}\ (x
+eq 0).
+          \]
+        </div>
+
+        <h2>Wartości charakterystyczne</h2>
+        <div class="math-block">
+          \[
+          egin{array}{c|c|c|c}
+          lpha & \sinlpha & \coslpha & 	anlpha\ \hline
+          0^\circ & 0 & 1 & 0\
+          30^\circ & rac12 & rac{\sqrt3}{2} & rac{1}{\sqrt3}\
+          45^\circ & rac{\sqrt2}{2} & rac{\sqrt2}{2} & 1\
+          60^\circ & rac{\sqrt3}{2} & rac12 & \sqrt3\
+          90^\circ & 1 & 0 & 	ext{brak}
+          \end{array}
+          \]
+        </div>
+      </div>
+
+      <div class="note">
+        Znaki funkcji w ćwiartkach:
+        <ul>
+          <li>I: \(\sin>0,\ \cos>0\)</li>
+          <li>II: \(\sin>0,\ \cos<0\)</li>
+          <li>III: \(\sin<0,\ \cos<0\)</li>
+          <li>IV: \(\sin<0,\ \cos>0\)</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr/>
+
+    <h2>Aplet GeoGebra: okrąg jednostkowy</h2>
+    <p class="kicker">Przesuwaj punkt i obserwuj zależności między \(lpha\), \(\sinlpha\) i \(\coslpha\).</p>
+    <div class="figure">
+      <div id="ggb-element" class="geogebra-wrap"></div>
+      <div class="cap">Aplet działa jako osadzony obiekt GeoGebra.</div>
+    </div>
+
+    <hr/>
+
+    <h2>Zadanie</h2>
+    <p>Oblicz \(\sin 150^\circ\) oraz \(\cos 150^\circ\).</p>
+    <details>
+      <summary><b>Pokaż rozwiązanie</b></summary>
+      <div class="math-block" style="margin-top:10px">
+        \[
+          150^\circ = 180^\circ - 30^\circ
+        \]
+        \[
+          \sin(180^\circ-	heta)=\sin	heta,\quad \cos(180^\circ-	heta)=-\cos	heta
+        \]
+        \[
+          \sin150^\circ=rac12,\quad \cos150^\circ=-rac{\sqrt3}{2}
+        \]
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="small">© Projekt edukacyjny — Okrąg jednostkowy</div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('load', function () {
+    var params = {
+      material_id: "mzqhe3hg",
+      width: 1200,
+      height: 650,
+      showToolBar: true,
+      showAlgebraInput: true,
+      showMenuBar: true,
+      enableRightClick: true,
+      enableShiftDragZoom: true
+    };
+    var app = new GGBApplet(params, true);
+    app.inject('ggb-element');
+  });
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

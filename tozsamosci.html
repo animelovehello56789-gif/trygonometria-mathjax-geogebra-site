@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tożsamości trygonometryczne</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <div>
+        <div>Trygonometria</div>
+        <div class="small">Tożsamości</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Start</a>
+      <a href="okrag.html">Okrąg jednostkowy</a>
+      <a href="wykresy.html">Wykresy</a>
+      <a href="tozsamosci.html">Tożsamości</a>
+      <a href="zastosowania.html">Zastosowania</a>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" type="button">Tryb</button>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding: 18px 0;">
+  <section class="card">
+    <h1>Tożsamości trygonometryczne</h1>
+    <p class="kicker">Tożsamości pomagają przekształcać wyrażenia i upraszczać obliczenia.</p>
+
+    <h2>1) Tożsamość Pitagorasa</h2>
+    <div class="math-block">
+      \[
+        \sin^2 x + \cos^2 x = 1
+      \]
+    </div>
+    <p class="note">
+      Na okręgu jednostkowym \(x=\cos x\), \(y=\sin x\), a równanie okręgu to \(x^2+y^2=1\).
+    </p>
+
+    <hr/>
+
+    <h2>2) Tangens</h2>
+    <div class="math-block">
+      \[
+        	an x = rac{\sin x}{\cos x}
+      \]
+      \[
+        1+	an^2 x = rac{1}{\cos^2 x}
+      \]
+    </div>
+
+    <hr/>
+
+    <h2>3) Suma i różnica kątów</h2>
+    <div class="math-block">
+      \[
+        \sin(a+b)=\sin a\cos b + \cos a\sin b
+      \]
+      \[
+        \sin(a-b)=\sin a\cos b - \cos a\sin b
+      \]
+      \[
+        \cos(a+b)=\cos a\cos b - \sin a\sin b
+      \]
+      \[
+        \cos(a-b)=\cos a\cos b + \sin a\sin b
+      \]
+    </div>
+
+    <hr/>
+
+    <h2>4) Podwójny kąt</h2>
+    <div class="math-block">
+      \[
+        \sin(2x)=2\sin x\cos x
+      \]
+      \[
+        \cos(2x)=\cos^2 x-\sin^2 x
+      \]
+      \[
+        \cos(2x)=2\cos^2 x-1
+      \]
+      \[
+        \cos(2x)=1-2\sin^2 x
+      \]
+    </div>
+
+    <hr/>
+
+    <h2>Zadanie</h2>
+    <p>Uprość: \(\sin(2x)\cdot 	an x\).</p>
+    <details>
+      <summary><b>Pokaż rozwiązanie</b></summary>
+      <div class="math-block" style="margin-top:10px">
+        \[
+          \sin(2x)\cdot 	an x = (2\sin x\cos x)\cdot rac{\sin x}{\cos x} = 2\sin^2 x
+        \]
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="small">© Projekt edukacyjny — Tożsamości</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wykresy sinusa i cosinusa</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <div>
+        <div>Trygonometria</div>
+        <div class="small">Wykresy</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Start</a>
+      <a href="okrag.html">Okrąg jednostkowy</a>
+      <a href="wykresy.html">Wykresy</a>
+      <a href="tozsamosci.html">Tożsamości</a>
+      <a href="zastosowania.html">Zastosowania</a>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" type="button">Tryb</button>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding: 18px 0;">
+  <section class="card">
+    <h1>Wykresy funkcji \(\sin x\) i \(\cos x\)</h1>
+    <p class="kicker">Wykresy są okresowe i opisują powtarzalne zjawiska.</p>
+
+    <div class="columns">
+      <div>
+        <h2>Własności</h2>
+        <div class="math-block">
+          \[
+            \sin(x+2\pi)=\sin x,\quad \cos(x+2\pi)=\cos x
+          \]
+          \[
+            -1 \le \sin x \le 1,\quad -1 \le \cos x \le 1
+          \]
+        </div>
+
+        <h3>Parzystość</h3>
+        <div class="math-block">
+          \[
+            \sin(-x)=-\sin x
+          \]
+          \[
+            \cos(-x)=\cos x
+          \]
+        </div>
+      </div>
+
+      <div class="note">
+        Dla \(\sin(ax)\) okres wynosi \(T=rac{2\pi}{|a|}\).
+      </div>
+    </div>
+
+    <hr/>
+
+    <h2>Przekształcenia</h2>
+    <div class="math-block">
+      \[
+        f(x)=A\sin(B(x-C))+D
+      \]
+    </div>
+    <ul>
+      <li>Amplituda: \(|A|\)</li>
+      <li>Okres: \(T=rac{2\pi}{|B|}\)</li>
+      <li>Przesunięcie poziome: \(C\)</li>
+      <li>Przesunięcie pionowe: \(D\)</li>
+    </ul>
+
+    <hr/>
+
+    <h2>Ćwiczenie</h2>
+    <p>Dla \(f(x)=2\sin(3x)-1\) podaj amplitudę, okres i przesunięcie pionowe.</p>
+    <details>
+      <summary><b>Pokaż odpowiedź</b></summary>
+      <div class="math-block" style="margin-top:10px">
+        \[
+          	ext{amplituda}=2,\quad T=rac{2\pi}{3},\quad D=-1
+        \]
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="small">© Projekt edukacyjny — Wykresy</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

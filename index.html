@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trygonometria – mini-portal</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <div>
+        <div>Trygonometria</div>
+        <div class="small">MathJax • GeoGebra • 5 podstron</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Start</a>
+      <a href="okrag.html">Okrąg jednostkowy</a>
+      <a href="wykresy.html">Wykresy</a>
+      <a href="tozsamosci.html">Tożsamości</a>
+      <a href="zastosowania.html">Zastosowania</a>
+    </nav>
+    <div class="actions">
+      <button id="themeToggle" type="button">Tryb</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Trygonometria w pigułce — zrozumiale i wizualnie</h1>
+      <div class="kicker">
+        Portal omawia definicje funkcji trygonometrycznych, okrąg jednostkowy, wykresy, tożsamości oraz praktyczne zastosowania.
+      </div>
+      <div class="badges">
+        <span class="badge"><span class="dot"></span> Zapis matematyczny</span>
+        <span class="badge"><span class="dot g"></span> Aplet GeoGebra</span>
+        <span class="badge"><span class="dot y"></span> Przykłady</span>
+        <span class="badge"><span class="dot r"></span> Zadania</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>1) Definicje (trójkąt prostokątny)</h2>
+      <p>Dla kąta \(lpha\) w trójkącie prostokątnym:</p>
+      <div class="math-block">
+        \[
+          \sinlpha = rac{	ext{przeciwległa}}{	ext{przeciwprostokątna}},\quad
+          \coslpha = rac{	ext{przyległa}}{	ext{przeciwprostokątna}},\quad
+          	anlpha = rac{\sinlpha}{\coslpha}.
+        \]
+      </div>
+
+      <p class="note">
+        Okrąg jednostkowy pozwala traktować \(\sinlpha\) i \(\coslpha\) jako współrzędne punktu na okręgu, co upraszcza rozumienie znaków, wartości i tożsamości.
+      </p>
+
+      <hr/>
+
+      <h2>2) Mini-spis treści</h2>
+      <ul>
+        <li><b>Okrąg jednostkowy</b> – definicje \(\sin\), \(\cos\) jako współrzędne.</li>
+        <li><b>Wykresy</b> – okres, amplituda, przesunięcia.</li>
+        <li><b>Tożsamości</b> – m.in. \(\sin^2 x + \cos^2 x = 1\), wzory na sumę i różnicę.</li>
+        <li><b>Zastosowania</b> – pomiary, modelowanie fal.</li>
+      </ul>
+
+      <hr/>
+
+      <h2>3) Szybkie zadanie</h2>
+      <p>Oblicz: \(\sin 30^\circ\), \(\cos 60^\circ\), \(	an 45^\circ\).</p>
+      <details>
+        <summary><b>Pokaż odpowiedź</b></summary>
+        <div class="math-block" style="margin-top:10px">
+          \[
+            \sin 30^\circ=rac12,\quad \cos 60^\circ=rac12,\quad 	an 45^\circ=1.
+          \]
+        </div>
+      </details>
+    </div>
+
+    <aside class="card">
+      <h2>Najważniejsze fakty</h2>
+      <ul>
+        <li>Zakres: \( -1 \le \sin x \le 1\) oraz \( -1 \le \cos x \le 1\).</li>
+        <li>Okres: \(\sin(x+2\pi)=\sin x\), \(\cos(x+2\pi)=\cos x\).</li>
+        <li>Tożsamość: \(\sin^2 x + \cos^2 x = 1\).</li>
+      </ul>
+      <div class="note" style="margin-top:12px">
+        Najlepiej zacząć od okręgu jednostkowego, a potem przejść do wykresów i tożsamości.
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div><b>Trygonometria — projekt WWW</b></div>
+    <div class="small">5 podstron • zapis matematyczny • aplet GeoGebra • spójna estetyka</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
