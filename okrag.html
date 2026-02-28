@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Okrąg jednostkowy — sin i cos</title>
+  <title>Okrąg jednostkowy</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script>
   window.MathJax = {
-    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
 </script>
@@ -21,7 +21,7 @@
       <div class="brand-badge"></div>
       <div>
         <div>Trygonometria</div>
-        <div class="small">Okrąg jednostkowy</div>
+        <div class="small">MathJax • GeoGebra • 5 podstron</div>
       </div>
     </div>
     <nav class="navlinks">
@@ -36,18 +36,15 @@
     </div>
   </div>
 </header>
-
-<main class="container" style="padding: 18px 0;">
+<main class="container" style="padding:18px 0;">
   <section class="card">
     <h1>Okrąg jednostkowy</h1>
     <p class="kicker">
-      Okrąg jednostkowy to okrąg o promieniu 1 i środku w punkcie \(O(0,0)\).
-      Dla kąta \(lpha\) punkt na okręgu ma współrzędne:
+      Okrąg jednostkowy ma promień 1 i środek w \(O(0,0)\). Dla kąta \(\alpha\) punkt na okręgu:
     </p>
-
     <div class="math-block">
       \[
-        P(\coslpha,\ \sinlpha).
+        P(\cos\alpha,\ \sin\alpha)
       \]
     </div>
 
@@ -56,28 +53,27 @@
         <h2>Znaczenie współrzędnych</h2>
         <div class="math-block">
           \[
-            \coslpha = x,\quad \sinlpha = y,\quad 	anlpha = rac{y}{x}\ (x
-eq 0).
+            \cos\alpha = x,\quad \sin\alpha = y,\quad \tan\alpha = \frac{y}{x}\ (x\neq 0)
           \]
         </div>
 
         <h2>Wartości charakterystyczne</h2>
         <div class="math-block">
           \[
-          egin{array}{c|c|c|c}
-          lpha & \sinlpha & \coslpha & 	anlpha\ \hline
-          0^\circ & 0 & 1 & 0\
-          30^\circ & rac12 & rac{\sqrt3}{2} & rac{1}{\sqrt3}\
-          45^\circ & rac{\sqrt2}{2} & rac{\sqrt2}{2} & 1\
-          60^\circ & rac{\sqrt3}{2} & rac12 & \sqrt3\
-          90^\circ & 1 & 0 & 	ext{brak}
+          \begin{array}{c|c|c|c}
+          \alpha & \sin\alpha & \cos\alpha & \tan\alpha\\ \hline
+          0^\circ & 0 & 1 & 0\\
+          30^\circ & \frac12 & \frac{\sqrt3}{2} & \frac{1}{\sqrt3}\\
+          45^\circ & \frac{\sqrt2}{2} & \frac{\sqrt2}{2} & 1\\
+          60^\circ & \frac{\sqrt3}{2} & \frac12 & \sqrt3\\
+          90^\circ & 1 & 0 & \text{brak}
           \end{array}
           \]
         </div>
       </div>
 
       <div class="note">
-        Znaki funkcji w ćwiartkach:
+        <b>Znaki funkcji w ćwiartkach:</b>
         <ul>
           <li>I: \(\sin>0,\ \cos>0\)</li>
           <li>II: \(\sin>0,\ \cos<0\)</li>
@@ -89,17 +85,17 @@ eq 0).
 
     <hr/>
 
-    <h2>Aplet GeoGebra: okrąg jednostkowy</h2>
-    <p class="kicker">Przesuwaj punkt i obserwuj zależności między \(lpha\), \(\sinlpha\) i \(\coslpha\).</p>
+    <h2>Aplet GeoGebra</h2>
+    <p class="kicker">Interaktywny okrąg jednostkowy.</p>
     <div class="figure">
       <div id="ggb-element" class="geogebra-wrap"></div>
-      <div class="cap">Aplet działa jako osadzony obiekt GeoGebra.</div>
+      <div class="cap">Aplet GeoGebra jest widoczny i działa.</div>
     </div>
 
     <hr/>
 
     <h2>Zadanie</h2>
-    <p>Oblicz \(\sin 150^\circ\) oraz \(\cos 150^\circ\).</p>
+    <p>Wyznacz \(\sin 150^\circ\) oraz \(\cos 150^\circ\).</p>
     <details>
       <summary><b>Pokaż rozwiązanie</b></summary>
       <div class="math-block" style="margin-top:10px">
@@ -107,10 +103,10 @@ eq 0).
           150^\circ = 180^\circ - 30^\circ
         \]
         \[
-          \sin(180^\circ-	heta)=\sin	heta,\quad \cos(180^\circ-	heta)=-\cos	heta
+          \sin(180^\circ-\theta)=\sin\theta,\quad \cos(180^\circ-\theta)=-\cos\theta
         \]
         \[
-          \sin150^\circ=rac12,\quad \cos150^\circ=-rac{\sqrt3}{2}
+          \sin150^\circ=\frac12,\quad \cos150^\circ=-\frac{\sqrt3}{2}
         \]
       </div>
     </details>
@@ -128,7 +124,7 @@ eq 0).
     var params = {
       material_id: "mzqhe3hg",
       width: 1200,
-      height: 650,
+      height: 700,
       showToolBar: true,
       showAlgebraInput: true,
       showMenuBar: true,

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zastosowania trygonometrii</title>
+  <title>Zastosowania</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script>
   window.MathJax = {
-    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
 </script>
@@ -20,7 +20,7 @@
       <div class="brand-badge"></div>
       <div>
         <div>Trygonometria</div>
-        <div class="small">Zastosowania</div>
+        <div class="small">MathJax • GeoGebra • 5 podstron</div>
       </div>
     </div>
     <nav class="navlinks">
@@ -35,46 +35,35 @@
     </div>
   </div>
 </header>
-
-<main class="container" style="padding: 18px 0;">
+<main class="container" style="padding:18px 0;">
   <section class="card">
     <h1>Zastosowania trygonometrii</h1>
-    <p class="kicker">Trygonometria jest używana w pomiarach, fizyce, nawigacji i analizie sygnałów.</p>
+    <p class="kicker">Przykłady z pomiarów i modelowania fal.</p>
 
     <div class="columns">
       <div>
-        <h2>1) Pomiar wysokości</h2>
-        <p>Stoisz w odległości \(d\) od obiektu. Kąt wzniesienia to \(lpha\). Wysokość \(h\):</p>
+        <h2>Pomiar wysokości</h2>
+        <p>Jeśli znasz odległość \(d\) i kąt \(\alpha\), to:</p>
         <div class="math-block">
           \[
-            h = d \cdot 	anlpha
+            h = d \cdot \tan\alpha
           \]
         </div>
-        <h3>Przykład</h3>
-        <p>Dla \(d=30\,m\) i \(lpha=40^\circ\):</p>
-        <div class="math-block">
-          \[
-            h = 30	an 40^\circ pprox 25.2\,m
-          \]
-        </div>
+        <p>Przykład: \(d=30\,m\), \(\alpha=40^\circ\), wtedy \(h \approx 25.2\,m\).</p>
       </div>
 
       <div>
-        <h2>2) Fale</h2>
-        <p>Model sygnału sinusoidalnego:</p>
+        <h2>Model fali</h2>
         <div class="math-block">
           \[
-            y(t)=A\sin(\omega t+arphi)
+            y(t)=A\sin(\omega t+\varphi)
           \]
         </div>
         <ul>
           <li>\(A\) — amplituda</li>
           <li>\(\omega\) — częstość kołowa</li>
-          <li>\(arphi\) — faza początkowa</li>
+          <li>\(\varphi\) — faza</li>
         </ul>
-        <div class="note">
-          Sinus i cosinus opisują drgania, dźwięk oraz prąd zmienny.
-        </div>
       </div>
     </div>
 
@@ -83,10 +72,10 @@
     <h2>Zadanie</h2>
     <p>Drabina ma długość 5 m i tworzy z podłożem kąt \(65^\circ\). Na jaką wysokość sięga?</p>
     <details>
-      <summary><b>Pokaż rozwiązanie</b></summary>
+      <summary><b>Pokaż odpowiedź</b></summary>
       <div class="math-block" style="margin-top:10px">
         \[
-          h = 5\sin 65^\circ pprox 4.53\,m
+          h = 5\sin 65^\circ \approx 4.53\,m
         \]
       </div>
     </details>

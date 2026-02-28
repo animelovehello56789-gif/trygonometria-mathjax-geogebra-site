@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/style.css" />
   <script>
   window.MathJax = {
-    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
 </script>
@@ -35,13 +35,12 @@
     </div>
   </div>
 </header>
-
 <main class="container">
   <section class="hero">
     <div class="hero-card">
-      <h1>Trygonometria w pigułce — zrozumiale i wizualnie</h1>
+      <h1>Trygonometria w pigułce</h1>
       <div class="kicker">
-        Portal omawia definicje funkcji trygonometrycznych, okrąg jednostkowy, wykresy, tożsamości oraz praktyczne zastosowania.
+        Definicje, okrąg jednostkowy, wykresy, tożsamości oraz zastosowania w zadaniach.
       </div>
       <div class="badges">
         <span class="badge"><span class="dot"></span> Zapis matematyczny</span>
@@ -54,54 +53,57 @@
 
   <section class="grid">
     <div class="card">
-      <h2>1) Definicje (trójkąt prostokątny)</h2>
-      <p>Dla kąta \(lpha\) w trójkącie prostokątnym:</p>
+      <h2>Definicje w trójkącie prostokątnym</h2>
+      <p>Dla kąta \(\alpha\):</p>
       <div class="math-block">
         \[
-          \sinlpha = rac{	ext{przeciwległa}}{	ext{przeciwprostokątna}},\quad
-          \coslpha = rac{	ext{przyległa}}{	ext{przeciwprostokątna}},\quad
-          	anlpha = rac{\sinlpha}{\coslpha}.
+          \sin\alpha = \frac{\text{przeciwległa}}{\text{przeciwprostokątna}},\quad
+          \cos\alpha = \frac{\text{przyległa}}{\text{przeciwprostokątna}},\quad
+          \tan\alpha = \frac{\sin\alpha}{\cos\alpha}.
+        \]
+      </div>
+
+      <hr/>
+
+      <h2>Najważniejsze własności</h2>
+      <div class="math-block">
+        \[
+          \sin(x+2\pi)=\sin x,\quad \cos(x+2\pi)=\cos x
+        \]
+        \[
+          -1 \le \sin x \le 1,\quad -1 \le \cos x \le 1
+        \]
+        \[
+          \sin(-x)=-\sin x,\quad \cos(-x)=\cos x
         \]
       </div>
 
       <p class="note">
-        Okrąg jednostkowy pozwala traktować \(\sinlpha\) i \(\coslpha\) jako współrzędne punktu na okręgu, co upraszcza rozumienie znaków, wartości i tożsamości.
+        Często używana tożsamość: \(\sin^2 x + \cos^2 x = 1\).
       </p>
+    </div>
 
-      <hr/>
-
-      <h2>2) Mini-spis treści</h2>
-      <ul>
-        <li><b>Okrąg jednostkowy</b> – definicje \(\sin\), \(\cos\) jako współrzędne.</li>
-        <li><b>Wykresy</b> – okres, amplituda, przesunięcia.</li>
-        <li><b>Tożsamości</b> – m.in. \(\sin^2 x + \cos^2 x = 1\), wzory na sumę i różnicę.</li>
-        <li><b>Zastosowania</b> – pomiary, modelowanie fal.</li>
-      </ul>
-
-      <hr/>
-
-      <h2>3) Szybkie zadanie</h2>
-      <p>Oblicz: \(\sin 30^\circ\), \(\cos 60^\circ\), \(	an 45^\circ\).</p>
+    <aside class="card">
+      <h2>Szybkie zadanie</h2>
+      <p>Oblicz: \(\sin 30^\circ\), \(\cos 60^\circ\), \(\tan 45^\circ\).</p>
       <details>
         <summary><b>Pokaż odpowiedź</b></summary>
         <div class="math-block" style="margin-top:10px">
           \[
-            \sin 30^\circ=rac12,\quad \cos 60^\circ=rac12,\quad 	an 45^\circ=1.
+            \sin 30^\circ=\frac12,\quad \cos 60^\circ=\frac12,\quad \tan 45^\circ=1
           \]
         </div>
       </details>
-    </div>
 
-    <aside class="card">
-      <h2>Najważniejsze fakty</h2>
+      <hr/>
+
+      <h2>Co znajdziesz dalej?</h2>
       <ul>
-        <li>Zakres: \( -1 \le \sin x \le 1\) oraz \( -1 \le \cos x \le 1\).</li>
-        <li>Okres: \(\sin(x+2\pi)=\sin x\), \(\cos(x+2\pi)=\cos x\).</li>
-        <li>Tożsamość: \(\sin^2 x + \cos^2 x = 1\).</li>
+        <li>Okrąg jednostkowy: \(P(\cos\alpha,\ \sin\alpha)\)</li>
+        <li>Wykresy: amplituda i okres</li>
+        <li>Tożsamości: suma i różnica, podwójny kąt</li>
+        <li>Zastosowania: pomiary i fale</li>
       </ul>
-      <div class="note" style="margin-top:12px">
-        Najlepiej zacząć od okręgu jednostkowego, a potem przejść do wykresów i tożsamości.
-      </div>
     </aside>
   </section>
 </main>
@@ -109,7 +111,7 @@
 <footer>
   <div class="container">
     <div><b>Trygonometria — projekt WWW</b></div>
-    <div class="small">5 podstron • zapis matematyczny • aplet GeoGebra • spójna estetyka</div>
+    <div class="small">5 podstron • MathJax • GeoGebra</div>
   </div>
 </footer>
 

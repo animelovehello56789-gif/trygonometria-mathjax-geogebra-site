@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wykresy sinusa i cosinusa</title>
+  <title>Wykresy</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script>
   window.MathJax = {
-    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
 </script>
@@ -20,7 +20,7 @@
       <div class="brand-badge"></div>
       <div>
         <div>Trygonometria</div>
-        <div class="small">Wykresy</div>
+        <div class="small">MathJax • GeoGebra • 5 podstron</div>
       </div>
     </div>
     <nav class="navlinks">
@@ -35,15 +35,14 @@
     </div>
   </div>
 </header>
-
-<main class="container" style="padding: 18px 0;">
+<main class="container" style="padding:18px 0;">
   <section class="card">
     <h1>Wykresy funkcji \(\sin x\) i \(\cos x\)</h1>
-    <p class="kicker">Wykresy są okresowe i opisują powtarzalne zjawiska.</p>
+    <p class="kicker">Okres i amplituda to kluczowe pojęcia.</p>
 
     <div class="columns">
       <div>
-        <h2>Własności</h2>
+        <h2>Podstawowe własności</h2>
         <div class="math-block">
           \[
             \sin(x+2\pi)=\sin x,\quad \cos(x+2\pi)=\cos x
@@ -53,46 +52,37 @@
           \]
         </div>
 
-        <h3>Parzystość</h3>
+        <h2>Postać ogólna</h2>
         <div class="math-block">
           \[
-            \sin(-x)=-\sin x
-          \]
-          \[
-            \cos(-x)=\cos x
+            f(x)=A\sin(B(x-C))+D
           \]
         </div>
+        <ul>
+          <li>Amplituda: \(|A|\)</li>
+          <li>Okres: \(T=\frac{2\pi}{|B|}\)</li>
+          <li>Przesunięcie w poziomie: \(C\)</li>
+          <li>Przesunięcie w pionie: \(D\)</li>
+        </ul>
       </div>
 
       <div class="note">
-        Dla \(\sin(ax)\) okres wynosi \(T=rac{2\pi}{|a|}\).
+        Przykład: \(f(x)=2\sin(3x)-1\)<br/>
+        Amplituda: \(2\)<br/>
+        Okres: \(\frac{2\pi}{3}\)<br/>
+        Przesunięcie: \(D=-1\)
       </div>
     </div>
 
     <hr/>
 
-    <h2>Przekształcenia</h2>
-    <div class="math-block">
-      \[
-        f(x)=A\sin(B(x-C))+D
-      \]
-    </div>
-    <ul>
-      <li>Amplituda: \(|A|\)</li>
-      <li>Okres: \(T=rac{2\pi}{|B|}\)</li>
-      <li>Przesunięcie poziome: \(C\)</li>
-      <li>Przesunięcie pionowe: \(D\)</li>
-    </ul>
-
-    <hr/>
-
-    <h2>Ćwiczenie</h2>
-    <p>Dla \(f(x)=2\sin(3x)-1\) podaj amplitudę, okres i przesunięcie pionowe.</p>
+    <h2>Zadanie</h2>
+    <p>Podaj okres funkcji \(g(x)=\cos(5x)\).</p>
     <details>
       <summary><b>Pokaż odpowiedź</b></summary>
       <div class="math-block" style="margin-top:10px">
         \[
-          	ext{amplituda}=2,\quad T=rac{2\pi}{3},\quad D=-1
+          T=\frac{2\pi}{5}
         \]
       </div>
     </details>

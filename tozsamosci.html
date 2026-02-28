@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tożsamości trygonometryczne</title>
+  <title>Tożsamości</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script>
   window.MathJax = {
-    tex: { inlineMath: [['\(','\)'], ['$', '$']] },
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
     options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
   };
 </script>
@@ -20,7 +20,7 @@
       <div class="brand-badge"></div>
       <div>
         <div>Trygonometria</div>
-        <div class="small">Tożsamości</div>
+        <div class="small">MathJax • GeoGebra • 5 podstron</div>
       </div>
     </div>
     <nav class="navlinks">
@@ -35,37 +35,19 @@
     </div>
   </div>
 </header>
-
-<main class="container" style="padding: 18px 0;">
+<main class="container" style="padding:18px 0;">
   <section class="card">
     <h1>Tożsamości trygonometryczne</h1>
-    <p class="kicker">Tożsamości pomagają przekształcać wyrażenia i upraszczać obliczenia.</p>
+    <p class="kicker">Najczęściej używane wzory w przekształceniach.</p>
 
-    <h2>1) Tożsamość Pitagorasa</h2>
+    <h2>Tożsamość Pitagorasa</h2>
     <div class="math-block">
       \[
         \sin^2 x + \cos^2 x = 1
       \]
     </div>
-    <p class="note">
-      Na okręgu jednostkowym \(x=\cos x\), \(y=\sin x\), a równanie okręgu to \(x^2+y^2=1\).
-    </p>
 
-    <hr/>
-
-    <h2>2) Tangens</h2>
-    <div class="math-block">
-      \[
-        	an x = rac{\sin x}{\cos x}
-      \]
-      \[
-        1+	an^2 x = rac{1}{\cos^2 x}
-      \]
-    </div>
-
-    <hr/>
-
-    <h2>3) Suma i różnica kątów</h2>
+    <h2>Suma i różnica kątów</h2>
     <div class="math-block">
       \[
         \sin(a+b)=\sin a\cos b + \cos a\sin b
@@ -81,9 +63,7 @@
       \]
     </div>
 
-    <hr/>
-
-    <h2>4) Podwójny kąt</h2>
+    <h2>Podwójny kąt</h2>
     <div class="math-block">
       \[
         \sin(2x)=2\sin x\cos x
@@ -102,12 +82,12 @@
     <hr/>
 
     <h2>Zadanie</h2>
-    <p>Uprość: \(\sin(2x)\cdot 	an x\).</p>
+    <p>Uprość: \(\sin(2x)\cdot \tan x\).</p>
     <details>
       <summary><b>Pokaż rozwiązanie</b></summary>
       <div class="math-block" style="margin-top:10px">
         \[
-          \sin(2x)\cdot 	an x = (2\sin x\cos x)\cdot rac{\sin x}{\cos x} = 2\sin^2 x
+          \sin(2x)\cdot \tan x = (2\sin x\cos x)\cdot \frac{\sin x}{\cos x} = 2\sin^2 x
         \]
       </div>
     </details>
